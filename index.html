@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+<style>
+
+#CalcSet{
+    display:inline-grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 80px auto auto auto auto;
+    background-color:gray;
+    border-radius:5px;
+    padding:5px;
+
+    width:400px;
+    height:600px;
+}
+
+#enSet{
+    grid-column: 1/span 4;
+    min-height: 19px;
+    background-color:gainsboro;
+    border:1px solid black;
+    border-radius: 4px;
+    font-size: 50px;
+}
+
+.btn{
+    font-size:30px;
+}
+
+.arith{
+    font-size:30px;
+}
+
+.enter{
+    grid-column: 3/span 2;
+    font-size:30px;
+}
+
+.clear{
+    font-size:30px;
+}
+
+</style>
+
+</head>
+<body>
+    
+<div id="CalcSet">
+    <div id="enSet" class="Space">
+
+    </div>
+
+    <input type="button" value="C" class="clear" onClick="Clear()"></input>
+    <input type="button" value="+-" class="arith" onClick="Display('-')"></input>
+    <input type="button" value="%" class="arith" onClick="Display('%')"></input>
+    <input type="button" value="7" class="btn" onClick="Display('7')"></input>
+    <input type="button" value="8" class="btn" onClick="Display('8')"></input>
+    <input type="button" value="9" class="btn" onClick="Display('9')"></input>
+    <input type="button" value="/" class="arith" onClick="Display('/')"></input>
+    <input type="button" value="4" class="btn" onClick="Display('4')"></input>
+    <input type="button" value="5" class="btn" onClick="Display('5')"></input>
+    <input type="button" value="6" class="btn" onClick="Display('6')"></input>
+    <input type="button" value="*" class="arith" onClick="Display('*')"></input>
+    <input type="button" value="1" class="btn" onClick="Display('1')"></input>
+    <input type="button" value="2" class="btn" onClick="Display('2')"></input>
+    <input type="button" value="3" class="btn" onClick="Display('3')"></input>
+    <input type="button" value="-" class="arith" onClick="Display('-')"></input>
+    <input type="button" value="0" class="btn" onClick="Display('0')"></input>
+    <input type="button" value="." class="btn" onClick="Display('.')"></input>
+    <input type="button" value="=" class="enter" onClick="Enter()"></input>
+    <input type="button" value="+" class="btn" onClick="Display('+')"></input>
+</div>
+
+</body>
+
+<script>
+
+function Display(val){
+    document.getElementById('enSet').value += val
+    return val
+}
+
+function Clear(){
+    var enset = document.getElementById('enSet').textContent = ''
+}
+
+function Enter(){
+    let x = document.getElementById('result').value
+    let y = eval(y);
+    document.getElementById('result').value = b
+}
+
+// { } ------------------------------------------------------------------- //
+
+</script>
+
+</html>
